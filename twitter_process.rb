@@ -20,7 +20,6 @@ class TwitterProcess
 			oauth_token: TwitterAppInfo::OAUTH_TOKEN,
 			oauth_token_secret: TwitterAppInfo::OAUTH_TOKEN_SECRET
 		)
-		@client.user("Helen_Techer")
 	end
 
 	def get_tweets_with_word(keyword, count=5)
