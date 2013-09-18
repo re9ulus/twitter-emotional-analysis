@@ -11,7 +11,7 @@ module TwitterFile
 	end
 
 	def TwitterFile.read_from_file(filename)
-		File.open('test').to_a
+		File.open(filename).to_a
 	end
 
 end
