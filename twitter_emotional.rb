@@ -17,7 +17,6 @@ class TwitterEmotional
 		if @rated_words.include? word
 			@rated_words[word]
 		else
-			puts word + '+'
 			0
 		end
 	end
