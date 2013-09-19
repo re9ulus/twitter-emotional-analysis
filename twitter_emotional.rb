@@ -27,7 +27,9 @@ class TwitterEmotional
 
 	def rate_tweet(tweet)
 		rates = words_from_tweet(tweet).map { |word| rate_word(word) }
-		rates.inject(:+)
+		# HACK: Sometimes on empty tweets rates return nil, and rates.inject(:+) return nil instead of number
+		# TODO: Fix
+		rates.inject(:+) || 0
 	end
 
 end
