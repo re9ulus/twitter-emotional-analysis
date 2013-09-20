@@ -23,8 +23,8 @@ module TwitterAnalyse
 		positive_negative(tweets)
 	end
 
-	def TwitterAnalyse.tweets_with_word(word, count=5)
-		tweets = @twitter.get_tweets_with_word(word, count)
+	def TwitterAnalyse.tweets_with_word(word, count=10)
+		tweets = @twitter.get_tweets_with_word(word, count: count)
 		positive_negative(tweets)
 	end
 
@@ -32,15 +32,23 @@ module TwitterAnalyse
 		# TODO: Implement
 	end
 
-	def TwitterAnalyse.user_tweets()
-		# TODO: Implement
+	def TwitterAnalyse.user_timeline(username, count=10)
+		puts 'wtf?'
+		tweets = @twitter.get_user_timeline(username, count: count)
+		positive_negative(tweets)
 	end
 end
 
+
+# TODO: Write Unit test from this
 def test_analyse_file
 	TwitterAnalyse.analyse_file "ukraine.data"
 end
 
 def test_tweets_with_word
 	TwitterAnalyse.tweets_with_word("Ok", 100)
+end
+
+def test_user_timeline
+	TwitterAnalyse.user_timeline("user_name", 100)
 end
