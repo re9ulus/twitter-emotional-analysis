@@ -37,4 +37,13 @@ module TwitterAnalyse
     tweets = @twitter.get_user_timeline(username, count: count)
     positive_negative(tweets)
   end
+
+  def TwitterAnalyse.compare_two_words(word1, word2, count=10)
+    # TODO: Add analytics
+    "#{word1}\t#{tweets_with_word(word1, count)}\n#{word2}\t#{tweets_with_word(word2, count)}"
+  end
+
+  def TwitterAnalyse.analyse_all(words, count=10)
+    words.map { |word| tweets_with_word(word, count) }
+  end
 end

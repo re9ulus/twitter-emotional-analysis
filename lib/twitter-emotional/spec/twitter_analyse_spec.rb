@@ -14,4 +14,11 @@ describe TwitterAnalyse do
     TwitterAnalyse.user_timeline("@twitter", 10).should_not be_nil
   end
   
+  it 'should compare two words' do
+    TwitterAnalyse.compare_two_words("Hello", "World", 10).should_not be_nil
+  end
+
+  it 'should analyse all words' do
+    TwitterAnalyse.analyse_all(["This","Three","Words"]).length.should be 3
+  end
 end
