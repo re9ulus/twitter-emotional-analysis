@@ -21,4 +21,5 @@ describe TwitterAnalyse do
   it 'should analyse all words' do
     TwitterAnalyse.analyse_all(["This","Three","Words"]).length.should be 3
   end
+  
 end

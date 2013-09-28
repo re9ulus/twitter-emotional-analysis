@@ -46,4 +46,5 @@ module TwitterAnalyse
   def TwitterAnalyse.analyse_all(words, count=10)
     words.map { |word| tweets_with_word(word, count) }
   end
+  
 end
