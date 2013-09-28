@@ -46,11 +46,11 @@ class TwitterProcess
   def create_tweet_base_with_word(word, filename, count=5)
     # TODO: Some tweets containe multiple lines. gsub('\n','') don't work on them, find solution.
     tweets = get_tweets_with_word(word, count: count)
-    TwitterFile.write_all_to_file(filename, tweets)
+    TwitterFile.write_all_tweets_to_file(filename, tweets)
   end
   
   def load_tweet_base(filename)
-    TwitterFile.read_from_file(filename)
+    TwitterFile.read_all_tweets_from_file(filename)
   end
   
 end
